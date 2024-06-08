@@ -1,0 +1,49 @@
+{
+  "name": "pmos-installer-configs",
+  "version": "1.0.0",
+  "description": "Configuration files for the PostmarketOS Installer.",
+  "type": "module",
+  "files": [
+    "lib/",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "main": "lib/validator.js",
+  "bin": "lib/cli.js",
+  "types": "lib/validator.d.ts",
+  "scripts": {
+    "validate": "./v2/cli.ts validate",
+    "test": "./v2/cli.ts test",
+    "build": "rm -rf build lib && ./v2/build.ts && npx tsc --build ./tsconfig.build.json",
+    "checkdownloads": "./v2/checkDownloads.ts",
+    "checksemver": "./v2/checkSemver.ts",
+    "lint": "npx prettier \"**\" --ignore-path=.gitignore --arrow-parens=avoid --trailing-comma=none -uw"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aunonno2024/PMOS-Installer-Configs.git"
+  },
+  "author": "Sish Alam Aunonno",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/aunonno2024/PMOS-Installer-Configs/issues"
+  },
+  "homepage": "https://github.com/aunonno2024/PMOS-Installer-Configs#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "axios": "^1.6.0",
+    "json-schema-to-typescript": "^11.0.2",
+    "prettier": "^2.8.3",
+    "progressive-downloader": "^2.0.2"
+  },
+  "dependencies": {
+    "ajv": "^8.12.0",
+    "chalk": "^5.2.0",
+    "commander": "^10.0.0",
+    "globby": "^13.1.3",
+    "semver": "^7.5.2",
+    "ts-node": "^10.9.1",
+    "yaml": "^2.2.2"
+  }
+}
