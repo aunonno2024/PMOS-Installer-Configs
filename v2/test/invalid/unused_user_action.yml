@@ -1,0 +1,20 @@
+expectedErrors:
+  - instancePath: "/user_actions/a"
+    schemaPath: "user_actions.schema.yml#/patternProperties/%5Cw/pmos_no-unused-user_actions"
+    keyword: "pmos_no-unused-user_actions"
+    params: {}
+    message: "no unused user_actions"
+
+name: InvalidPhone
+codename: "unused_user_action"
+formfactor: "phone"
+aliases: []
+doppelgangers: []
+user_actions:
+  a:
+    title: "Reboot to Recovery"
+    description: "Press and hold the volume up and power buttons until the phone reboots."
+    image: "phone_power_down"
+    button: true
+unlock: []
+operating_systems: []
